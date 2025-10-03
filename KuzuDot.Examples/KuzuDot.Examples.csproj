@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <UseAppHost>false</UseAppHost> <!-- Prevent locked apphost.exe copy issues -->
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\KuzuDot\KuzuDot.csproj" />
+  </ItemGroup>
+
+  <!-- Include native libraries -->
+  <ItemGroup>
+    <Content Include="..\libkuzu\kuzu_shared.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>kuzu_shared.dll</Link>
+    </Content>
+  </ItemGroup>
+
+</Project>

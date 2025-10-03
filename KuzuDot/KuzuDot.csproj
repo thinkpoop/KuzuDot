@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Nullable>disable</Nullable>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <LangVersion>8.0</LangVersion>
+  </PropertyGroup>
+
+  <!-- Include native libraries -->
+  <ItemGroup>
+    <Content Include="..\libkuzu\kuzu_shared.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Native\kuzu_shared.dll</Link>
+    </Content>
+  </ItemGroup>
+
+  <!-- Copy native library for different runtime identifiers if needed -->
+  <ItemGroup Condition="'$(RuntimeIdentifier)' == 'win-x64' Or '$(RuntimeIdentifier)' == ''">
+    <NativeLibrary Include="..\libkuzu\kuzu_shared.dll" />
+  </ItemGroup>
+
+</Project>

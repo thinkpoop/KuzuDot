@@ -1,0 +1,33 @@
+<Window x:Class="KuzuDot.Demo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="KuzuDot Demo (WPF)" Height="600" Width="1000" Background="#1e1e1e" Foreground="#f0f0f0">
+    <Grid Margin="8">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Text="Enter Cypher Query:" FontWeight="Bold" Margin="0,0,0,4" Grid.Row="0"/>
+        <DockPanel Grid.Row="1" LastChildFill="True" Margin="0,0,0,6">
+            <Button x:Name="ExecuteButton" Content="Execute (Ctrl+Enter)" Padding="12,4" Margin="0,0,8,0" Click="ExecuteButton_OnClick"/>
+            <TextBlock VerticalAlignment="Center" Foreground="#888" Text=":memory: Database"/>
+        </DockPanel>
+
+        <Grid Grid.Row="2" Margin="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="3*"/>
+            </Grid.RowDefinitions>
+
+            <TextBox x:Name="QueryInput" Grid.Row="0" AcceptsReturn="True" AcceptsTab="True" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" FontFamily="Consolas" FontSize="13" TextWrapping="NoWrap" Background="#252526" Foreground="#f0f0f0"/>
+            <Separator Grid.Row="1" Margin="0,6"/>
+            <TextBox x:Name="ResultsBox" Grid.Row="2" IsReadOnly="True" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" FontFamily="Consolas" FontSize="13" TextWrapping="NoWrap" Background="#252526" Foreground="#f0f0f0"/>
+        </Grid>
+    </Grid>
+</Window>

@@ -2,7 +2,7 @@
 
 KuzuDot is a .NET client library for interacting with the [KùzuDB](https://kuzudb.com/) graph database.
 
-Very ~vibe~ coded, so excuse the comments where Copilot talks to itself. Also I haven't reviewed super thorough yet, so... trust nothing.
+Very ~vibe coded, so excuse the comments where Copilot talks to itself. Also I haven't reviewed super thorough yet, so... trust nothing.
 
 ## Features
 
@@ -20,10 +20,7 @@ Very ~vibe~ coded, so excuse the comments where Copilot talks to itself. Also I 
 
 ### Installation
 
-TODO: make a NuGet package?
-```bash
-dotnet add package KuzuDot
-```
+TODO: add something here
 
 ### Usage
 
@@ -31,7 +28,7 @@ TODO: add usage
 
 ## Documentation
 
-TODO:
+TODO: add something here
 - [API Reference](docs/API.md)
 - [Examples](docs/EXAMPLES.md)
 
